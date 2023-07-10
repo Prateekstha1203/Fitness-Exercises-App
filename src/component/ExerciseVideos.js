@@ -5,11 +5,6 @@ const ExerciseVideos = ({ exerciseVideoData, name }) => {
   if (!exerciseVideoData || exerciseVideoData.length === 0) {
     return <div>Loading...</div>;
   }
-
-  const videoIds = exerciseVideoData
-    .filter(item => item.video) // Filter out objects without a 'video' property
-    .map(item => item.video.videoId);
-
   return (
     <Box sx={{ marginTop: { lg: "203px", xs: "20px" } }} p="20px">
       <Typography
